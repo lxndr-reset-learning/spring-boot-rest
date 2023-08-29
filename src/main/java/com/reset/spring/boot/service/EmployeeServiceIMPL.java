@@ -13,8 +13,6 @@ import java.util.List;
 public class EmployeeServiceIMPL implements EmployeeService {
     @Autowired
     private EmployeeDAO employeeDAO;
-
-
     @Override
     public List<Employee> getAllEmployees() {
         return employeeDAO.getAllEmployees();

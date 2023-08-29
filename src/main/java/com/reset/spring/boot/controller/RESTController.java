@@ -30,11 +30,15 @@ public class RESTController {
         return employeeService.getEmployeeById(id);
     }
 
-
     @PostMapping("/employees")
     public Employee addNewEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
         return employee;
+    }
+
+    @PutMapping("/employees")
+    public void updateEmployee(@RequestBody Employee employee) {
+        employeeService.saveEmployee(employee);
     }
 
     @DeleteMapping("/employees/{id}")
